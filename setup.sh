@@ -132,7 +132,7 @@ fi
 if confirmar "Paso 7: Configurar GitHub Pages"; then
   npm install gh-pages --save-dev
 
-  sed -i '/"private": true/a "homepage": "https://TU_USUARIO.github.io/notas-rapidas",' package.json
+  sed -i '/"private": true/a "homepage": "https://automatizacion-it.github.io/notas-rapidas",' package.json
 
   npx json -I -f package.json -e 'this.scripts["predeploy"]="npm run build"'
   npx json -I -f package.json -e 'this.scripts["deploy"]="gh-pages -d dist"'
